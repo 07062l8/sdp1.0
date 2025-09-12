@@ -25,7 +25,7 @@ public class Pizza {
         private String cheese;
         private boolean isVegetarian;
 
-        public Builder size(String size){
+        public Builder withSize(String size){
             this.size = size;
             return this;
         }
@@ -35,22 +35,22 @@ public class Pizza {
             return this;
         }
 
-        public Builder sauce(String sauce){
+        public Builder withSauce(String sauce){
             this.sauce = sauce;
             return this;
         }
 
-        public Builder toppings(List<String> toppings){
+        public Builder withToppings(List<String> toppings){
             this.toppings = toppings;
             return this;
         }
 
-        public Builder cheese(String cheese){
+        public Builder withCheese(String cheese){
             this.cheese = cheese;
             return this;
         }
 
-        public Builder isVegetarian(boolean isVegetarian){
+        public Builder Vegetarian(boolean isVegetarian){
             this.isVegetarian = isVegetarian;
             return this;
         }
