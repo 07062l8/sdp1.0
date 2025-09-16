@@ -1,75 +1,68 @@
 import java.util.List;
 
 public class Pizza {
-    private final String size;
-    private final String doughType;
-    private final String sauce;
-    private final List<String> toppings;
-    private final String cheese;
-    private final boolean isVegetarian;
+    private String size;
+    private String doughType;
+    private String sauce;
+    private List<String> toppings;
+    private String cheese;
+    private boolean isVegetarian;
 
-    private Pizza(Builder builder) {
-        this.size = builder.size;
-        this.doughType = builder.doughType;
-        this.sauce = builder.sauce;
-        this.toppings = builder.toppings;
-        this.cheese = builder.cheese;
-        this.isVegetarian = builder.isVegetarian;
+    public Pizza(String size, String doughType, String sauce, List<String> toppings,
+                 String cheese, boolean isVegetarian) {
+        this.size = size;
+        this.doughType = doughType;
+        this.sauce = sauce;
+        this.toppings = toppings;
+        this.cheese = cheese;
+        this.isVegetarian = isVegetarian;
     }
 
-    public static class Builder{
-        private String size;
-        private String doughType;
-        private String sauce;
-        private List<String> toppings;
-        private String cheese;
-        private boolean isVegetarian;
-
-        public Builder withSize(String size){
-            this.size = size;
-            return this;
-        }
-
-        public Builder doughType(String doughType){
-            this.doughType = doughType;
-            return this;
-        }
-
-        public Builder withSauce(String sauce){
-            this.sauce = sauce;
-            return this;
-        }
-
-        public Builder withToppings(List<String> toppings){
-            this.toppings = toppings;
-            return this;
-        }
-
-        public Builder withCheese(String cheese){
-            this.cheese = cheese;
-            return this;
-        }
-
-        public Builder Vegetarian(boolean isVegetarian){
-            this.isVegetarian = isVegetarian;
-            return this;
-        }
-
-        public Pizza build(){
-            return new Pizza(this);
-        }
+    public String getSize() {
+        return size;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "%s pizza with %s dough, %s sauce, %s cheese, toppings: %s [%s]",
-                size,
-                doughType,
-                sauce,
-                cheese,
-                toppings != null ? String.join(", ", toppings) : "none",
-                isVegetarian ? "Vegetarian" : "Non-Vegetarian"
-        );
+    public String getDoughType() {
+        return doughType;
+    }
+
+    public String getSauce() {
+        return sauce;
+    }
+
+    public List<String> getToppings() {
+        return toppings;
+    }
+
+    public String getCheese() {
+        return cheese;
+    }
+
+    public boolean isVegetarian() {
+        return isVegetarian;
+    }
+
+    public void setSize(String size){
+        this.size = size;
+    }
+
+    public void setDoughType(String doughType) {
+        this.doughType = doughType;
+    }
+
+    public void setSauce(String sauce) {
+        this.sauce = sauce;
+    }
+
+    public void setToppings(List<String> toppings) {
+        this.toppings = toppings;
+    }
+
+    public void setCheese(String cheese) {
+        this.cheese = cheese;
+    }
+
+    public void setVegetarian(boolean isVegetarian) {
+        this.isVegetarian = isVegetarian;
     }
 }
