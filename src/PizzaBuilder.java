@@ -1,12 +1,14 @@
 import java.util.List;
 
+// Concrete implementation of the builder for creating a Pizza object
 public class PizzaBuilder implements Builder {
     private Pizza pizza;
 
     public PizzaBuilder() {
-        this.pizza = new Pizza;
+        this.pizza = new Pizza();
     }
 
+    // Implementation of each build step with builder return (for call chain)
     @Override
     public Builder buildSize(String size) {
         this.pizza.setSize(size);
@@ -43,6 +45,7 @@ public class PizzaBuilder implements Builder {
         return this;
     }
 
+    // Return the finished Pizza object
     @Override
     public Pizza buildPizza() {
         return pizza;

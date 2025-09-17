@@ -1,5 +1,6 @@
 import java.util.List;
 
+// Builder interface defining the steps for making a pizza
 public interface Builder {
     Builder buildSize(String size);
     Builder buildDough(String dough);

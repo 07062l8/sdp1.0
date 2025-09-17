@@ -8,16 +8,6 @@ public class Pizza {
     private String cheese;
     private boolean isVegetarian;
 
-    public Pizza(String size, String doughType, String sauce, List<String> toppings,
-                 String cheese, boolean isVegetarian) {
-        this.size = size;
-        this.doughType = doughType;
-        this.sauce = sauce;
-        this.toppings = toppings;
-        this.cheese = cheese;
-        this.isVegetarian = isVegetarian;
-    }
-
     public String getSize() {
         return size;
     }
@@ -64,5 +54,16 @@ public class Pizza {
 
     public void setVegetarian(boolean isVegetarian) {
         this.isVegetarian = isVegetarian;
+    }
+
+    @Override
+    public String toString() {
+        return "🍕 Pizza Details:\n" +
+                "- Size: " + size + "\n" +
+                "- Dough Type: " + doughType + "\n" +
+                "- Sauce: " + sauce + "\n" +
+                "- Toppings: " + String.join(", ", toppings) + "\n" +
+                "- Cheese: " + cheese + "\n" +
+                "- Vegetarian: " + (isVegetarian ? "Yes" : "No");
     }
 }
